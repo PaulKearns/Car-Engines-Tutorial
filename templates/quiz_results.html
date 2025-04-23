@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mt-5">
+    <div class="col text-center">
+        <h1>Your Final Score:</h1>
+        <h2 class="mt-4">Score: {{ score }}/{{ total }}</h2>
+        
+        {% if score == total %}
+            <h3 class="mt-4 text-success">Nice Job!</h3>
+        {% elif score >= total / 2 %}
+            <h3 class="mt-4 text-primary">Good Effort!</h3>
+        {% else %}
+            <h3 class="mt-4 text-warning">Keep Learning!</h3>
+        {% endif %}
+        
+        <div class="mt-5">
+            <img src="/static/images/sports_car.jpg" alt="Sports car" class="img-fluid" style="max-height: 400px;">
+        </div>
+        
+        <div class="mt-5">
+            <a href="{{ url_for('home') }}" class="btn btn-lg btn-primary">HOME</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

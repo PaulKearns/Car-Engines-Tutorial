@@ -1,0 +1,60 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Different Types of Structure",
+      "content": "Engine structure is one of the most fundamental aspects of automotive engineering, defining both performance characteristics and the distinct sound profile of a vehicle. The main types include:",
+      "images": [
+        "/static/images/engine_types.jpg",
+        "/static/images/pistons_layout.jpg",
+        "/static/images/rotary_engine.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "How a Cat-Back Exhaust Affects Sound",
+      "content": "A cat-back exhaust system refers to the portion of the exhaust system from the catalytic converter to the exhaust tips. It plays a crucial role in determining your car's sound profile.",
+      "points": [
+        {
+          "title": "Louder Volume",
+          "description": "Aftermarket cat-back systems often use larger diameter pipes and less restrictive mufflers/resonators, allowing exhaust gases to flow more freely. This results in a louder, more pronounced exhaust note compared to stock systems."
+        },
+        {
+          "title": "Deeper or Sharper Tone",
+          "description": "Cat-back systems with resonators produce a smoother, deeper tone, while those without resonators sound sharper and raspier."
+        },
+        {
+          "title": "More Aggressive Character",
+          "description": "Many performance cat-back systems are tuned to emphasize a sporty or race-inspired sound, with more crackles, pops, or backfires depending on the car and setup."
+        },
+        {
+          "title": "Active Exhaust Valves",
+          "description": "Some cat-back systems feature active exhaust valves that let drivers switch between quiet and aggressive sound modes, offering both comfort and performance at the push of a button or automatically based on driving conditions."
+        }
+      ],
+      "images": [
+        "/static/images/cat_back.jpg"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": 1,
+      "question": "What type of engine is this?",
+      "image": "/static/images/inline_six.jpg",
+      "options": ["V6", "I6", "FLAT6", "Rotary"],
+      "correct": "I6"
+    },
+    {
+      "id": 2,
+      "question": "Which of the following factors will not affect engine sound?",
+      "options": [
+        "Engine structure and cylinder count",
+        "Exhaust system design",
+        "Car paint color",
+        "Engine speed (RPM)"
+      ],
+      "correct": "Car paint color"
+    }
+  ]
+}

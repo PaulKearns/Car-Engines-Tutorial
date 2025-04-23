@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+.btn-outline-secondary {
+    border-width: 2px;
+}
+
+.btn-primary, .btn-success {
+    padding: 8px 25px;
+    font-weight: bold;
+}
+
+/* Home page styles */
+.home-title {
+    font-size: 3rem;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+}
+
+.home-buttons .btn {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+/* Learn page styles */
+.lesson-title {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.lesson-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.lesson-points h4 {
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Quiz styles */
+.question-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.form-check-label {
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
+
+.form-check-input:checked + .form-check-label[style*="color: green"] {
+    background-color: rgba(40, 167, 69, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.form-check-input:checked + .form-check-label[style*="color: red"] {
+    background-color: rgba(220, 53, 69, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.badge.bg-success {
+    margin-left: 10px;
+}
+
+.score-display {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Quiz results styles */
+.final-score {
+    font-size: 2.5rem;
+    margin: 40px 0;
+}
+
+.result-message {
+    font-size: 1.8rem;
+    margin: 30px 0;
+}
+
+.results-image {
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

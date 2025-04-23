@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mt-3">
+    <div class="col">
+        <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">HOME</a>
+    </div>
+    <div class="col text-end">
+        <h5>Score: {{ score }}/{{ quiz_length }}</h5>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col">
+        <h2>{{ question.question }}</h2>
+    </div>
+</div>
+
+{% if question.image %}
+<div class="row mt-4">
+    <div class="col text-center">
+        <img src="{{ question.image }}" alt="Question image" class="img-fluid" style="max-height: 400px;">
+    </div>
+</div>
+{% endif %}
+
+<div class="row mt-4">
+    <div class="col">
+        {% if feedback_given %}
+            <div>
+                {% for option in question.options %}
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="answer" id="option{{ loop.index }}" value="{{ option }}" 
+                        {% if option == user_answer %}checked{% endif %} disabled>
+                    <label class="form-check-label" for="option{{ loop.index }}" 
+                        {% if option == question.correct %}style="color: green; font-weight: bold;"{% endif %}
+                        {% if option == user_answer and option != question.correct %}style="color: red; text-decoration: line-through;"{% endif %}>
+                        {{ option }}
+                    </label>
+                </div>
+                {% endfor %}
+                
+                <div class="mt-5">
+                    {% if question_id < quiz_length %}
+                        <a href="{{ url_for('quiz', question_id=question_id+1) }}" class="btn btn-primary">Next Question</a>
+                    {% else %}
+                        <a href="{{ url_for('quiz_results') }}" class="btn btn-success">See Results</a>
+                    {% endif %}
+                </div>
+            </div>
+        {% else %}
+            <form method="POST">
+                {% for option in question.options %}
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="answer" id="option{{ loop.index }}" value="{{ option }}" required>
+                    <label class="form-check-label" for="option{{ loop.index }}">
+                        {{ option }}
+                    </label>
+                </div>
+                {% endfor %}
+                
+                <div class="mt-5">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
