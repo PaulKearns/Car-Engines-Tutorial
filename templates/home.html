@@ -2,16 +2,35 @@
 
 {% block content %}
 <div class="text-center">
-    <h1 class="mt-5 mb-5">The Souls of Cars</h1>
+    <h1 class="home-title">The Souls of Cars</h1>
     
-    <div class="d-grid gap-3 col-6 mx-auto">
-        <a href="{{ url_for('learn', lesson_id=1) }}" class="btn btn-lg btn-outline-secondary">
-            Start Learning
+    <div class="d-grid gap-3 col-6 mx-auto home-buttons">
+        <a href="{{ url_for('learn', lesson_id=1) }}" class="btn btn-outline-secondary">
+            Learn
         </a>
         
-        <a href="{{ url_for('take_quiz') }}" class="btn btn-lg btn-outline-secondary">
-            Quiz Mode
+        <a href="{{ url_for('take_quiz') }}" class="btn btn-outline-secondary">
+            Quiz
         </a>
+    </div>
+</div>
+
+<div class="quick-view-section">
+    <h3 class="quick-view-heading">Quick View</h3>
+    
+    <div class="image-gallery">
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='images/engine_types.jpg') }}" alt="Engine types" class="img-fluid">
+            <div class="gallery-caption">IMG 1</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='images/pistons_layout.jpg') }}" alt="Pistons layout" class="img-fluid">
+            <div class="gallery-caption">IMG 2</div>
+        </div>
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='images/rotary_engine.jpg') }}" alt="Rotary engine" class="img-fluid">
+            <div class="gallery-caption">IMG 3</div>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -9,32 +9,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-    <div class="container">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-              <a class="navbar-brand" href="{{ url_for('home') }}">The Souls of Cars</a>
-              <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <div class="container">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('learn', lesson_id=1) }}">Learn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('take_quiz') }}">Quiz</a>
-                        </li>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+    <div class="header-bar">
+        <h1 class="site-title"><a href="{{ url_for('home') }}" class="site-title-link">The Souls of Cars</a></h1>
+        <div class="nav-links">
+            <a href="{{ url_for('learn', lesson_id=1) }}">Learn</a>
+            <a href="{{ url_for('take_quiz') }}">Quiz</a>
+        </div>
     </div>
-
+    
     <div class="container">
-        {% block content %}{% endblock %}
+        <div class="main-content">
+            {% block content %}{% endblock %}
+        </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

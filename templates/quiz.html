@@ -2,9 +2,6 @@
 
 {% block content %}
 <div class="row mt-3">
-    <div class="col">
-        <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">HOME</a>
-    </div>
     <div class="col text-end">
         <h5>Score: {{ score }}/{{ quiz_length }}</h5>
     </div>
@@ -16,16 +13,15 @@
     </div>
 </div>
 
-{% if question.image %}
 <div class="row mt-4">
-    <div class="col text-center">
+    {% if question.image %}
+    <div class="col-md-6">
         <img src="{{ question.image }}" alt="Question image" class="img-fluid" style="max-height: 400px;">
     </div>
-</div>
-{% endif %}
-
-<div class="row mt-4">
+    <div class="col-md-6">
+    {% else %}
     <div class="col">
+    {% endif %}
         {% if feedback_given %}
             <div>
                 {% for option in question.options %}
