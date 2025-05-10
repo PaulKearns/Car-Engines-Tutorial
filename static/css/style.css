@@ -117,7 +117,7 @@ p {
     font-family: sans-serif; /*'Microsoft YaHei UI Light', 'Microsoft YaHei UI'*/
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #666666;
+    color: var(--text-gray)
 }
 
 /* Button styles */
@@ -321,3 +321,11 @@ p {
     width: 120px;
 }
 
+/* Learn Page */
+.gallery-item .img-size {
+  width: 40%;
+  height: 300px;
+  object-fit: fill;
+  object-position: top;
+  border-radius: 8px;
+}
