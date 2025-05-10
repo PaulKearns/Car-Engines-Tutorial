@@ -89,28 +89,7 @@
     {
       "id": 2,
       "question": "What type of engine is this?",
-      "image": "",
-      "options": ["V6", "I6", "FLAT6", "Rotary"],
-      "correct": "I6"
-    },
-    {
-      "id": 1,
-      "question": "What type of engine is this?",
-      "image": "/static/images/inline_six.jpg",
-      "options": ["V6", "I6", "FLAT6", "Rotary"],
-      "correct": "I6"
-    },
-    {
-      "id": 1,
-      "question": "What type of engine is this?",
-      "image": "/static/images/inline_six.jpg",
-      "options": ["V6", "I6", "FLAT6", "Rotary"],
-      "correct": "I6"
-    },
-    {
-      "id": 1,
-      "question": "What type of engine is this?",
-      "image": "/static/images/inline_six.jpg",
+      "image": "https://www.renderhub.com/3d-horse/v8-engine-block1",
       "options": ["V6", "I6", "FLAT6", "Rotary"],
       "correct": "I6"
     },
