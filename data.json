@@ -90,8 +90,15 @@
       "id": 2,
       "question": "What type of engine is this?",
       "image": "https://www.renderhub.com/3d-horse/v8-engine-block1",
+      "options": ["V8", "I8", "FLAT8", "Rotary"],
+      "correct": "V8"
+    },
+    {
+      "id": 3,
+      "question": "What type of engine is this?",
+      "image": "https://millennium-technologies.com/autocylinderrepair/",
       "options": ["V6", "I6", "FLAT6", "Rotary"],
-      "correct": "I6"
+      "correct": "FLAT6"
     },
     {
       "id": 5,
