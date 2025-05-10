@@ -2,16 +2,78 @@
   "lessons": [
     {
       "id": 1,
-      "title": "Different Types of Structure",
-      "content": "Engine structure is one of the most fundamental aspects of automotive engineering, defining both performance characteristics and the distinct sound profile of a vehicle. The main types include:",
+      "title": "Engine Structures",
+      "content": "Engine structure is one of the most fundamental aspects of automotive engineering, defining both performance characteristics and the distinct sound profile of a vehicle. The main types we will discuss here are Inline, V, and Flat.",
       "images": [
-        "/static/images/engine_types.jpg",
-        "/static/images/pistons_layout.jpg",
-        "/static/images/rotary_engine.jpg"
+        "/static/images/engine_types.jpg"
       ]
     },
+  
     {
       "id": 2,
+      "title": "Inline Engines",
+      "content": "",
+      "points": [
+        {
+          "title": "Compact",
+          "description": "Inline engines are easier and cheaper to manufacture and maintain with their components aligned in one row. These engines also fit well in compact cars"
+        },
+        {
+          "title": "Naturally Balanced",
+          "description": "Inline-6 engines are naturally balanced and run very smoothly."
+        },
+        {
+          "title": "Handling",
+          "description": "They are lighter and more fuel-efficent due to having fewer moving parts."
+        }
+      ],
+      "images": ["/static/images/inline_six.jpg"]
+    },
+
+    {
+      "id": 3,
+      "title": "V Engines",
+      "content": "",
+      "points": [
+        {
+          "title": "Compact",
+          "description": "V engines have a shorter length than inline engines, so they fit in more vehicles, like those with limited engine bay space"
+        },
+        {
+          "title": "Naturally Balanced",
+          "description": "V8’s and V12’s are are naturally balanced by overlapping power strokes and symmetrical design, reducing vibrations"
+        },
+        {
+          "title": "Handling",
+          "description": "The engine sits lower in the vehicle, improving center of gravity and handling"
+        }
+      ],
+      "images": ["/static/images/v8.jpg"]
+    },
+
+    {
+      "id": 4,
+      "title": "Flat Engines",
+      "content": "",
+      "points": [
+        {
+          "title": "Compact",
+          "description": "V engines have a shorter length than inline engines, so they fit in more vehicles, like those with limited engine bay space"
+        },
+        {
+          "title": "Naturally Balanced",
+          "description": "V8’s and V12’s are are naturally balanced by overlapping power strokes and symmetrical design, reducing vibrations"
+        },
+        {
+          "title": "Handling",
+          "description": "The engine sits lower in the vehicle, improving center of gravity and handling"
+        }
+      ],
+      "images": ["/static/images/flat6.jpg"]
+    },
+    
+    {
+      "id": 5,
       "title": "How a Cat-Back Exhaust Affects Sound",
       "content": "A cat-back exhaust system refers to the portion of the exhaust system from the catalytic converter to the exhaust tips. It plays a crucial role in determining your car's sound profile.",
       "points": [
@@ -36,30 +98,10 @@
         "/static/images/cat_back.jpg"
       ]
     },
+
     {
-      "id": 3,
-      "title": "V Engines",
-      "content": "",
-      "points": [
-        {
-          "title": "Compact",
-          "description": "V engines have a shorter length than inline engines, so they fit in more vehicles, like those with limited engine bay space"
-        },
-        {
-          "title": "Naturally Balanced",
-          "description": "V8’s and V12’s are are naturally balanced by overlapping power strokes and symmetrical design, reducing vibrations"
-        },
-        {
-          "title": "Handling",
-          "description": "The engine sits lower in the vehicle, improving center of gravity and handling"
-        }
-      ],
-      "images": [
-        "https://tenor.com/en-GB/view/v-engine-gif-24870818"
-      ]
-    },
-    {
-      "id": 4,
+      "id": 6,
+      "title": "",
       "content": "The number of cells in the catalytic converter has a significant impact on the exhaust sound.",
       "points": [
         {

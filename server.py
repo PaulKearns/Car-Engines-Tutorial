@@ -8,8 +8,9 @@ app.secret_key = 'your_secret_key'  # Required for session
 
 # Load data from JSON file
 def load_data():
-    with open('data.json', 'r') as f:
+    with open('data.json', encoding='utf-8') as f:
         return json.load(f)
+
 
 # Routes
 @app.route('/')

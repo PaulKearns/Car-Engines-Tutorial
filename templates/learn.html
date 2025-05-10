@@ -2,35 +2,39 @@
 
 {% block content %}
 <div class="lesson-content">
-    <h1>{{ lesson.title }}</h1>
+    <h3>{{ lesson.title }}</h3>
     
-    <p>{{ lesson.content }}</p>
-    
-    {% if lesson.images %}
-    <div class="image-gallery">
-        {% for image in lesson.images %}
-        <div class="gallery-item">
-            <img src="{{ image }}" alt="Lesson image" class="img-fluid">
-            {% if loop.index == 1 %}
-                <div class="gallery-caption">V-Type</div>
-            {% elif loop.index == 2 %}
-                <div class="gallery-caption">I-Type</div>
-            {% elif loop.index == 3 %}
-                <div class="gallery-caption">Flat</div>
+    <div class="row">
+        <div class="col-6">
+            <p>{{ lesson.content }}</p>
+
+            {% if lesson.points %}
+            <div class="lesson-points">
+                {% for point in lesson.points %}
+                    {% if point.title is defined and point.description is defined %}
+                    <h4>{{ point.title }}</h4>
+                    <p>{{ point.description }}</p>
+                    {% else %}
+                        <p>{{ point }}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
             {% endif %}
         </div>
-        {% endfor %}
+
+        <div class="col-6">
+            {% if lesson.images %}
+                {% for image in lesson.images %}
+                    <img src="{{ image }}" alt="Lesson image" class="gallery-item img-size" />
+                {% endfor %}
+            {% endif %}
+        </div>
+
+
+
     </div>
-    {% endif %}
-    
-    {% if lesson.points %}
-    <div class="lesson-points">
-        {% for point in lesson.points %}
-            <h4>{{ point.title }}</h4>
-            <p>{{ point.description }}</p>
-        {% endfor %}
-    </div>
-    {% endif %}
+        
+
     
     <div class="nav-buttons">
         <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">Back</a>
