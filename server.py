@@ -102,25 +102,25 @@ def quiz(question_id):
     
     # Handle form submission
     if request.method == 'POST':
-        user_answer = request.form.get('answer')
-        if user_answer:  # Check that we actually got an answer
-            # Record answer
+        user_answer = request.form.getlist('answer')
+
+        if user_answer:
             session['quiz']['answers'][str(question_id)] = user_answer
             
-            # Check if correct and add to score
-            if user_answer == question['correct']:
-                # Only add to score if this is the first time answering correctly
+            # Ensure both sides are sets for comparison
+            correct_set = set(question['correct'])  # assuming it's already a list
+            answer_set = set(user_answer)
+            
+            if answer_set == correct_set:
                 if str(question_id) not in session['quiz'].get('correct_answers', []):
                     session['quiz']['score'] += 1
                     if 'correct_answers' not in session['quiz']:
                         session['quiz']['correct_answers'] = []
                     session['quiz']['correct_answers'].append(str(question_id))
             
-            # Explicitly save the session to ensure changes persist
             session.modified = True
-            
-            # Show feedback
             feedback_given = True
+
     else:
         # Check if we already have an answer for this question (coming back)
         if str(question_id) in session['quiz'].get('answers', {}):

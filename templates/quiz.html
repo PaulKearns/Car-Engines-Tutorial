@@ -26,14 +26,14 @@
             <div>
                 {% for option in question.options %}
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="answer" id="option{{ loop.index }}" value="{{ option }}" 
-                        {% if option == user_answer %}checked{% endif %} disabled>
-                    <label class="form-check-label" for="option{{ loop.index }}" 
-                        {% if option == question.correct %}style="color: green; font-weight: bold;"{% endif %}
-                        {% if option == user_answer and option != question.correct %}style="color: red; text-decoration: line-through;"{% endif %}>
-                        {{ option }}
+                    <input class="form-check-input" type="checkbox" name="answer" id="option{{ loop.index }}" value="{{ option }}"
+                      {% if option in user_answer %}checked{% endif %} disabled>
+                    <label class="form-check-label" for="option{{ loop.index }}"
+                      {% if option in question.correct %}style="color: green; font-weight: bold;"{% endif %}
+                      {% if option in user_answer and option not in question.correct %}style="color: red; text-decoration: line-through;"{% endif %}>
+                      {{ option }}
                     </label>
-                </div>
+                  </div>                  
                 {% endfor %}
                 
                 <div class="mt-5">
@@ -48,7 +48,7 @@
             <form method="POST">
                 {% for option in question.options %}
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="answer" id="option{{ loop.index }}" value="{{ option }}" required>
+                    <input class="form-check-input" type="checkbox" name="answer" id="option{{ loop.index }}" value="{{ option }}">
                     <label class="form-check-label" for="option{{ loop.index }}">
                         {{ option }}
                     </label>
