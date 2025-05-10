@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="text-center">
-    <h1 class="home-title">The Souls of Cars</h1>
+    <h2 class="home-title">The Souls of Cars</h2>
     
     <div class="mx-auto home-buttons">
         <a href="{{ url_for('learn', lesson_id=1) }}" class="btn btn-outline-secondary">
@@ -16,20 +16,44 @@
 </div>
 
 <div class="quick-view-section">
-    <h3 class="quick-view-heading">Quick View</h3>
+
+    <h3 class="quick-view-heading">Start learning!</h3>
+    <hr class="quick-view-lb">
     
-    <div class="image-gallery">
-        <div class="gallery-item">
-            <img src="{{ url_for('static', filename='images/engine_types.jpg') }}" alt="Engine types" class="img-fluid">
-            <div class="gallery-caption">engine_types</div>
+    <div class="row">
+    
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Inline_6_Cylinder_with_firing_order_1-5-3-6-2-4.gif" class="card-img-top img-size" alt="Image of a Straight 6 engine">   
+                
+                <div class="card-body text-center">
+                    <div class="card-button">
+                        <a href="#" class="btn btn-outline-secondary">Straight-6</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="{{ url_for('static', filename='images/pistons_layout.jpg') }}" alt="Pistons layout" class="img-fluid">
-            <div class="gallery-caption">pistons_layout</div>
+        
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/V8-Firing.gif" alt="Image of V-8 engine" class="card-img-top img-size" alt="Image of a V-8 engine">   
+                <div class="card-body text-center">                    
+                    <div class="card-button">
+                        <a href="#" class="btn btn-outline-secondary">V-8</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="{{ url_for('static', filename='images/rotary_engine.jpg') }}" alt="Rotary engine" class="img-fluid">
-            <div class="gallery-caption">rotary_engine</div>
+        
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/flat-6.gif') }}" alt="Image of a Flat 6 engine" class="card-img-top img-size">   
+                <div class="card-body text-center">        
+                    <div class="card-button">
+                        <a href="#" class="btn btn-outline-secondary">Straight-6</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
