@@ -28,13 +28,23 @@
                     <img src="{{ image }}" alt="Lesson image" class="gallery-item img-size" />
                 {% endfor %}
             {% endif %}
+
+        {% if lesson.audio %}
+            <div class="audio-row">
+                {% for audio in lesson.audio %}
+                    <div class="audio-item" style="flex: 1;">
+                        <div>{{ audio.title }}</div>
+                        <audio controls>
+                            <source src="{{ audio.file }}" type="audio/mpeg">
+                            Sorry, your browser does not support the audio element.
+                        </audio>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
         </div>
-
-
-
     </div>
-        
-
     
     <div class="nav-buttons">
         {% if prev_lesson %}

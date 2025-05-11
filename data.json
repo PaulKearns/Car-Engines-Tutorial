@@ -27,9 +27,16 @@
         }
       ],
       "images": [
-        "/static/images/inline_six.jpg"
+          "/static/images/inline_six.jpg"
+      ],
+      "audio": [
+          {
+            "title": "Toyote AE86: Inline-4",
+            "file": "/static/audio/ae86.mp3"
+          }
       ]
     },
+
     {
       "id": 3,
       "title": "V Engines",
@@ -50,7 +57,14 @@
       ],
       "images": [
         "/static/images/v8.jpg"
-      ]
+      ],
+      
+      "audio": [
+          {
+            "title": "Ford Shelby GT-350 Voodoo V-8",
+            "file": "/static/audio/gt350.mp3"
+          }
+        ]
     },
     {
       "id": 4,
@@ -72,7 +86,14 @@
       ],
       "images": [
         "/static/images/flat6.jpg"
-      ]
+      ],
+
+      "audio": [
+          {
+            "title": "Porsche GT3RS: Flat 6",
+            "file": "/static/audio/gt3rs.mp3"
+          }
+        ]
     },
     {
       "id": 5,
@@ -97,18 +118,25 @@
         }
       ],
       "images": [
-        "/static/images/cat_back.jpg"
-      ]
+        "/static/images/catback.jpg"
+      ],
+      
+      "audio": [
+          {
+            "title": "V6 Before Cat-back install",
+            "file": "/static/audio/before_cat.mp3"
+          },
+          {
+            "title": "V6 After Cat-back install",
+            "file": "/static/audio/after_cat.mp3"
+          }
+        ]
     },
     {
       "id": 6,
       "title": "The Catalytic Converter and its Impact on Engine Sound",
       "content": "The number of cells in the catalytic converter has a significant impact on the exhaust sound.",
       "points": [
-        {
-          "title": "What is cell count?",
-          "description": "The number of cells per square inch (CPSI) used in the catalytic directly affects airflow and exhaust sound characteristics. Cells are used for filtering exhaust gases."
-        },
         {
           "title": "High cell count (e.g., 800 CPSI)",
           "description": "The honeycomb structure is denser, which restricts airflow more. This results in quieter, more subdued exhaust sound—ideal for factory settings and better emissions control."
@@ -119,7 +147,6 @@
         }
       ],
       "images": [
-        "https://files.sfchronicle.com/static-assets/compression-bot/1614240000_catalytic_convertor_antitheft.jpg",
         "https://www.shopdap.com/pub/media/wysiwyg/home/mk7_gti_articles/Cat_comparison.PNG"
       ]
     }
