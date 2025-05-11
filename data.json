@@ -14,7 +14,7 @@
       "content": "",
       "points": [
         {
-          "title": "Compact",
+          "title": "Simple",
           "description": "Inline engines are easier and cheaper to manufacture and maintain with their components aligned in one row. These engines also fit well in compact cars"
         },
         {
@@ -58,16 +58,16 @@
       "content": "",
       "points": [
         {
-          "title": "Compact",
-          "description": "V engines have a shorter length than inline engines, so they fit in more vehicles, like those with limited engine bay space"
+          "title": "Complex",
+          "description": "Flat engines can be more complex and expensive to service due to wider layout."
         },
         {
           "title": "Naturally Balanced",
-          "description": "V8’s and V12’s are are naturally balanced by overlapping power strokes and symmetrical design, reducing vibrations"
+          "description": "Flat engines are also naturally balanced becuase the opposing cylinders reduce vibrations"
         },
         {
-          "title": "Handling",
-          "description": "The engine sits lower in the vehicle, improving center of gravity and handling"
+          "title": "Performance",
+          "description": "The low center of gravity improves stability and handling. Cooling is also efficient because cylinders are exposed to more airflow."
         }
       ],
       "images": [
@@ -217,6 +217,7 @@
     },
     {
       "id": 9,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLfBKqIshFfMM5_-5xwlq-pJ3rRw4i78zjPA&s",
       "question": "What type of V engine is more naturally balanced? Select all that apply",
       "options": [
         "V4",
