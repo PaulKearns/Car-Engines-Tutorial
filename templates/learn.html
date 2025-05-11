@@ -5,7 +5,7 @@
     <h3>{{ lesson.title }}</h3>
     
     <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-md-6">
             <p>{{ lesson.content }}</p>
 
             {% if lesson.points %}
@@ -22,7 +22,7 @@
             {% endif %}
         </div>
 
-        <div class="col-6">
+        <div class="col-12 col-md-6">
             {% if lesson.images %}
                 {% for image in lesson.images %}
                     <img src="{{ image }}" id="lesson-image" alt="Lesson image" class="gallery-item img-size" />
