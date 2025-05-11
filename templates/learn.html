@@ -25,21 +25,22 @@
         <div class="col-6">
             {% if lesson.images %}
                 {% for image in lesson.images %}
-                    <img src="{{ image }}" alt="Lesson image" class="gallery-item img-size" />
+                    <img src="{{ image }}" id="lesson-image" alt="Lesson image" class="gallery-item img-size" />
                 {% endfor %}
             {% endif %}
 
         {% if lesson.audio %}
             <div class="audio-row">
                 {% for audio in lesson.audio %}
-                    <div class="audio-item" style="flex: 1;">
-                        <div>{{ audio.title }}</div>
-                        <audio controls>
-                            <source src="{{ audio.file }}" type="audio/mpeg">
+                    <div class="audio-item" data-image-playing="{{ audio.image_playing }}">
+                        <div class="audio-title">{{ audio.title }}</div>
+                        <audio class="audio-control" controls>
+                            <source src="{{ audio.file }}" type="audio/mpeg" />
                             Sorry, your browser does not support the audio element.
                         </audio>
                     </div>
                 {% endfor %}
+
             </div>
         {% endif %}
 
@@ -60,4 +61,8 @@
         {% endif %}
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 {% endblock %}

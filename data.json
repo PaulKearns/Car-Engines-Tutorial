@@ -30,10 +30,11 @@
           "/static/images/inline_six.jpg"
       ],
       "audio": [
-          {
-            "title": "Toyote AE86: Inline-4",
-            "file": "/static/audio/ae86.mp3"
-          }
+        {
+          "title": "Toyota AE86: Inline-4",
+          "file": "/static/audio/ae86.mp3",
+          "image_playing": "/static/images/ae86_pop.jpg"
+        }
       ]
     },
 
@@ -62,7 +63,8 @@
       "audio": [
           {
             "title": "Ford Shelby GT-350 Voodoo V-8",
-            "file": "/static/audio/gt350.mp3"
+            "file": "/static/audio/gt350.mp3",
+            "image_playing": "/static/images/gt350_pop.jpg"
           }
         ]
     },
@@ -90,8 +92,9 @@
 
       "audio": [
           {
-            "title": "Porsche GT3RS: Flat 6",
-            "file": "/static/audio/gt3rs.mp3"
+            "title": "Porsche GT3RS",
+            "file": "/static/audio/gt3rs.mp3",
+            "image_playing": "/static/images/gt3rs_pop.jpg"
           }
         ]
     },
@@ -124,11 +127,13 @@
       "audio": [
           {
             "title": "V6 Before Cat-back install",
-            "file": "/static/audio/before_cat.mp3"
+            "file": "/static/audio/before_cat.mp3",
+            "image_playing": "/static/images/gma1.jpg"
           },
           {
             "title": "V6 After Cat-back install",
-            "file": "/static/audio/after_cat.mp3"
+            "file": "/static/audio/after_cat.mp3",
+            "image_playing": "/static/images/gma.gif"
           }
         ]
     },

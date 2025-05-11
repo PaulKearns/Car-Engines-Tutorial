@@ -334,9 +334,19 @@ p {
     margin-top: 10px;
     display: flex;
     gap: 40px;
-    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
  }
 
- .audio-item {
+.audio-item {
     flex: 1;
- }
+    max-width: 300px;
+}
+
+.audio-title  {
+    margin: 10px;
+}
+
+.audio-item audio {
+    width: 100%;
+}
