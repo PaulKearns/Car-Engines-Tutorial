@@ -105,7 +105,16 @@ def quiz(question_id):
     
     # Handle form submission
     if request.method == 'POST':
-        user_answer = request.form.getlist('answer')
+        # For single-choice questions (1,2,3,4,5,7,8), we get a single string
+        # For multi-choice questions (6,9,10), we get a list
+        is_multiple_choice = question_id in [6, 9, 10]
+        
+        if is_multiple_choice:
+            user_answer = request.form.getlist('answer')
+        else:
+            # For single choice, put the value in a list for consistent handling
+            single_answer = request.form.get('answer')
+            user_answer = [single_answer] if single_answer else []
 
         if user_answer:
             session['quiz']['answers'][str(question_id)] = user_answer
@@ -175,7 +184,7 @@ def take_quiz():
     session['from_reset'] = True
     return redirect(url_for('quiz', question_id=1))
 
-
+'''
 def _print_durations(session_data):
     """Helper function to calculate and print durations from timestamps (for debugging)"""
     if 'page_visits' in session_data and 'timestamps' in session_data['page_visits']:
@@ -192,7 +201,28 @@ def _print_durations(session_data):
             
             duration = (t2 - t1).total_seconds()
             print(f"User spent {duration} seconds on {current_key}")
-
+'''
+def _print_durations(session_data):
+    """Helper function to calculate and print durations from timestamps (for debugging)"""
+    if 'page_visits' in session_data and 'timestamps' in session_data['page_visits']:
+        timestamps = session_data['page_visits']['timestamps']
+        
+        # Create a list of (page, timestamp) tuples
+        timestamp_entries = []
+        for page, timestamp_str in timestamps.items():
+            timestamp = datetime.fromisoformat(timestamp_str)
+            timestamp_entries.append((page, timestamp))
+        
+        # Sort by actual timestamp values, not by page names
+        sorted_entries = sorted(timestamp_entries, key=lambda x: x[1])
+        
+        print("Page visit durations:")
+        for i in range(len(sorted_entries) - 1):
+            current_page, current_time = sorted_entries[i]
+            next_page, next_time = sorted_entries[i + 1]
+            
+            duration = (next_time - current_time).total_seconds()
+            print(f"User spent {duration} seconds on {current_page}")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)

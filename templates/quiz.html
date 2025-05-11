@@ -25,9 +25,15 @@
         {% if feedback_given %}
             <div>
                 {% for option in question.options %}
+                {% set is_multiple = question.id in [6, 9, 10] %}
                 <div class="form-check mb-3">
+                    {% if is_multiple %}
                     <input class="form-check-input" type="checkbox" name="answer" id="option{{ loop.index }}" value="{{ option }}"
                       {% if option in user_answer %}checked{% endif %} disabled>
+                    {% else %}
+                    <input class="form-check-input" type="radio" name="answer" id="option{{ loop.index }}" value="{{ option }}"
+                      {% if option in user_answer %}checked{% endif %} disabled>
+                    {% endif %}
                     <label class="form-check-label" for="option{{ loop.index }}"
                       {% if option in question.correct %}style="color: green; font-weight: bold;"{% endif %}
                       {% if option in user_answer and option not in question.correct %}style="color: red; text-decoration: line-through;"{% endif %}>
@@ -47,8 +53,13 @@
         {% else %}
             <form method="POST">
                 {% for option in question.options %}
+                {% set is_multiple = question.id in [6, 9, 10] %}
                 <div class="form-check mb-3">
+                    {% if is_multiple %}
                     <input class="form-check-input" type="checkbox" name="answer" id="option{{ loop.index }}" value="{{ option }}">
+                    {% else %}
+                    <input class="form-check-input" type="radio" name="answer" id="option{{ loop.index }}" value="{{ option }}">
+                    {% endif %}
                     <label class="form-check-label" for="option{{ loop.index }}">
                         {{ option }}
                     </label>
