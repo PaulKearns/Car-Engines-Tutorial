@@ -37,12 +37,16 @@
 
     
     <div class="nav-buttons">
-        <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">Back</a>
-        
-        {% if next_lesson %}
-            <a href="{{ url_for('learn', lesson_id=next_lesson) }}" class="btn btn-primary">Next</a>
+        {% if prev_lesson %}
+            <a href="{{ url_for('learn', lesson_id=prev_lesson) }}" class="btn btn-outline-secondary">Previous</a>
         {% else %}
-            <a href="{{ url_for('quiz', question_id=1) }}" class="btn btn-success">Start Quiz</a>
+        <a href="{{ url_for('home') }}" class="btn btn-outline-secondary">Home</a>
+        {% endif %}
+
+        {% if next_lesson %}
+            <a href="{{ url_for('learn', lesson_id=next_lesson) }}" class="btn btn-outline-secondary">Next</a>
+        {% else %}
+            <a href="{{ url_for('quiz', question_id=1) }}" class="btn btn-outline-secondary">Start Quiz</a>
         {% endif %}
     </div>
 </div>

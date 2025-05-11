@@ -78,12 +78,6 @@ body {
     color: #333333;
 }
 
-/*.site-title-link {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}*/
-
 .site-title-link:hover {
     color: #666666;
     text-decoration: none;
@@ -267,6 +261,12 @@ p {
     margin-bottom: 20px;
 }
 
+.nav-buttons .btn{
+    background-color: var(--nav-color);
+    color: var(--text-gray);
+    width: 120px;
+}
+
 /* Custom classes for wireframe elements */
 .quick-view-section {
     margin-top: 50px;
@@ -329,3 +329,4 @@ p {
   object-position: top;
   border-radius: 8px;
 }
+

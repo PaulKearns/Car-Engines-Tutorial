@@ -51,11 +51,14 @@ def learn(lesson_id):
     
     # Determine if there's a next lesson
     next_lesson = lesson_id + 1 if lesson_id < len(data['lessons']) else None
+
+    prev_lesson = lesson_id -1 if lesson_id >=2 else None
     
     return render_template('learn.html', 
                           lesson=lesson, 
                           lesson_id=lesson_id,
                           next_lesson=next_lesson,
+                          prev_lesson=prev_lesson,
                           title=lesson['title'])
 
 @app.route('/quiz/<int:question_id>', methods=['GET', 'POST'])
