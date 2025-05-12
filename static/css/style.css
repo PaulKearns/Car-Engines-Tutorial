@@ -322,12 +322,13 @@ p {
 }
 
 /* Learn Page */
-.gallery-item .img-size {
-  width: 40%;
-  height: 300px;
-  object-fit: fill;
-  object-position: top;
-  border-radius: 8px;
+.gallery-item.img-size {
+    width: 100%;         /* Fill the column */
+    height: auto;        /* Maintain aspect ratio */
+    max-height: 300px;   /* Optional cap */
+    object-fit: contain; /* Show entire image without distortion */
+    border-radius: 8px;
+    display: block;
 }
 
 .audio-row {

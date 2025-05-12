@@ -45,15 +45,15 @@
       "points": [
         {
           "title": "Compact",
-          "description": "V engines have a shorter length than inline engines, so they fit in more vehicles, like those with limited engine bay space"
+          "description": "V engines have a shorter length than inline engines, so they fit in more vehicles, like those with limited engine bay space."
         },
         {
           "title": "Naturally Balanced",
-          "description": "V8’s and V12’s are are naturally balanced by overlapping power strokes and symmetrical design, reducing vibrations"
+          "description": "V8’s and V12’s are are naturally balanced by overlapping power strokes and symmetrical design, reducing vibrations. V4's and V6's do not have this same characteristic."
         },
         {
           "title": "Handling",
-          "description": "The engine sits lower in the vehicle, improving center of gravity and handling"
+          "description": "The engine sits lower in the vehicle, improving center of gravity and handling."
         }
       ],
       "images": [
@@ -79,7 +79,7 @@
         },
         {
           "title": "Naturally Balanced",
-          "description": "Flat engines are also naturally balanced becuase the opposing cylinders reduce vibrations"
+          "description": "Flat engines are also naturally balanced because the opposing cylinders reduce vibrations."
         },
         {
           "title": "Performance",
@@ -262,6 +262,7 @@
     {
       "id": 10,
       "question": "What type of engines have improved handling due to weight distribution? Select all that apply.",
+      "image": "https://matsonauto.com/wp-content/uploads/2024/05/matson-piston-diag-300x150.webp",
       "options": [
         "Inline",
         "Flat",
