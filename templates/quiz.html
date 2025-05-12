@@ -44,9 +44,9 @@
                 
                 <div class="mt-5">
                     {% if question_id < quiz_length %}
-                        <a href="{{ url_for('quiz', question_id=question_id+1) }}" class="btn btn-primary">Next Question</a>
+                        <a href="{{ url_for('quiz', question_id=question_id+1) }}" class="btn btn-outline-secondary">Next Question</a>
                     {% else %}
-                        <a href="{{ url_for('quiz_results') }}" class="btn btn-success">See Results</a>
+                        <a href="{{ url_for('quiz_results') }}" class="btn btn-outline-secondary">See Results</a>
                     {% endif %}
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 {% endfor %}
                 
                 <div class="mt-5">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-outline-secondary">Submit</button>
                 </div>
             </form>
         {% endif %}
